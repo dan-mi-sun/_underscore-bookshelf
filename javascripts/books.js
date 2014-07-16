@@ -5,7 +5,8 @@ function handleResponse(response) {
     var bookObj = new Book(book);
     books.push(bookObj);
     bookObj.addToBookshelf();
-    bookObj.addStar();
+    bookObj.filterHotBooks();
+    bookObj.addStarToHotBook();
   });
 }
 
@@ -26,15 +27,23 @@ Book.prototype.addToBookshelf = function() {
   bookshelf.append(book_container);
 }
 
-Book.prototype.addStar = function () {
-  var star = $(document.createElement("img"));
+Book.prototype.filterHotBooks = function () {
+  var book_container = $(".book-container")  
+  _.filter([this.rating], function(rating) { 
+    if (rating > 3) { 
+      book_container.addClass('hot');
+    }
+  });
+}
+
+Book.prototype.addStarToHotBook = function () {
   var star_container = $(document.createElement("div"));
   star_container.addClass('star-container');
+  var star = $(document.createElement("img"));
   star.addClass('star');
   star.data('title', 'star');
-  star.attr({src: 'img/star.png',
-            height: '30px',
-            width: '30px'});
+  star.attr({src: 'img/star.png', height: '30px', width: '30px'});
   star_container.append(star);
-  $(".book-container").append(star_container);
+  $(".hot").append(star_container);
 }
+
