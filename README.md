@@ -15,3 +15,18 @@ practice underscore.js and jQuery
 ### Notes
 http://dan-mi-sun.github.io/week-6-day-26-intro-to-jquery-and-underscorejs/
 
+####Notes from WeGotCoders:
+http://dan-mi-sun.github.io/
+
+http://dan-mi-sun.github.io/wegotcoders/why-code-with-we-got-coders/
+
+http://dan-mi-sun.github.io/reflections-on-8-weeks-with-we-got-coders/
+
+
+####Contact
+twitter: @dan_mi_sun
+
+gmail: dan.mi.sun@gmail.com
+
+uk.linkedin.com/in/danielsundigital/
+
